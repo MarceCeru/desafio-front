@@ -20,4 +20,29 @@
 body {
     background-color: var(--Yellow);
     font-family: var(--Font-Family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--Gray-950);
+}
+
+.card {
+    background-color: var(--White);
+    width: 327px;
+    padding: 24px;
+    border-radius: 20px;
+    border: 1px solid var(--Gray-950);
+    box-shadow: 10px 10px var(--Gray-950);
+
+    & .ilustration {
+        width: 100%;
+        border-radius: 12px;
+    }
+
+    & .label {
+        background-color: var(--Yellow);
+        padding: 4px 12px;
+        display: inline-block;
+    }
 }
