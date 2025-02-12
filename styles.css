@@ -38,11 +38,45 @@ body {
     & .ilustration {
         width: 100%;
         border-radius: 12px;
+        margin-bottom: 24px;
     }
 
     & .label {
         background-color: var(--Yellow);
         padding: 4px 12px;
         display: inline-block;
+        font-weight: 800;
+        margin-bottom: 12px;
+        border-radius: 4px;
+    }
+
+    & .data {
+        font-size: 0.75rem;
+        margin-bottom: 16px;
+        font-weight: 600;
+    }
+
+    & .title {
+        font-size: 1.25rem;
+        font-weight: 800;
+        margin-bottom: 16px;
+    }
+
+    & .description {
+        color: var(--Gray-500);
+        font-size: .875rem;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    & .container-perfil{
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        & img{
+            margin-right: 16px;
+            width: 32px;
+        }
     }
 }
