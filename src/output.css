@@ -379,6 +379,7 @@
     --color-Gray-500: hsl(0, 0%, 42%);
     --color-Gcolor-ray-950: hsl(0, 0%, 7%);
     --Font-Figtree: 'Figtree';
+    --shadow-card: 10px 10px  hsl(0, 0%, 7%);
   }
 }
 @layer base {
@@ -697,6 +698,18 @@
       max-width: 96rem !important;
     }
   }
+  .mr-4 {
+    margin-right: calc(var(--spacing) * 4);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -801,6 +814,12 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-\[327px\] {
+    width: 327px;
   }
   .w-screen {
     width: 100vw;
@@ -1301,6 +1320,18 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
+  .rounded-\[20px\] {
+    border-radius: 20px;
+  }
+  .rounded-sm {
+    border-radius: var(--radius-sm);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
   .rounded-s {
     border-start-start-radius: 0.25rem;
     border-end-start-radius: 0.25rem;
@@ -1409,11 +1440,17 @@
     --tw-border-style: solid;
     border-style: solid;
   }
+  .border-Gcolor-ray-950 {
+    border-color: var(--color-Gcolor-ray-950);
+  }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
   }
   .bg-\(color\:--my-color\) {
     background-color: var(--my-color);
+  }
+  .bg-White {
+    background-color: var(--color-White);
   }
   .bg-Yellow {
     background-color: var(--color-Yellow);
@@ -1605,6 +1642,15 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
   .text-center {
     text-align: center;
   }
@@ -1647,9 +1693,45 @@
   .align-top {
     vertical-align: top;
   }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .leading-1 {
+    --tw-leading: calc(var(--spacing) * 1);
+    line-height: calc(var(--spacing) * 1);
+  }
+  .leading-1\.5 {
+    --tw-leading: calc(var(--spacing) * 1.5);
+    line-height: calc(var(--spacing) * 1.5);
+  }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+  }
+  .leading-5\.5 {
+    --tw-leading: calc(var(--spacing) * 5.5);
+    line-height: calc(var(--spacing) * 5.5);
+  }
+  .leading-\[1\.5\] {
+    --tw-leading: 1.5;
+    line-height: 1.5;
+  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .text-balance {
     text-wrap: balance;
@@ -1723,6 +1805,12 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-Gcolor-ray-950 {
+    color: var(--color-Gcolor-ray-950);
+  }
+  .text-Gray-500 {
+    color: var(--color-Gray-500);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1885,6 +1973,14 @@
   }
   .shadow {
     --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[10px_10px_rgba\(0\,0\,0\)\] {
+    --tw-shadow: 10px 10px var(--tw-shadow-color, rgba(0,0,0));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-card {
+    --tw-shadow: 10px 10px  var(--tw-shadow-color, hsl(0, 0%, 7%));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .shadow-initial {
@@ -2170,7 +2266,10 @@
 }
 @font-face {
   font-family: Figtree;
-  src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("../assets/fonts/Figtree-VariableFont_wght.ttf") format("woff2");
 }
 @keyframes spin {
   to {
@@ -2296,6 +2395,10 @@
   initial-value: 0;
 }
 @property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
